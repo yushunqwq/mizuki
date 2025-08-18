@@ -11,11 +11,11 @@ import { LinkPreset } from "./types/config";
 import { getTranslateLanguageFromConfig } from "./utils/language-utils";
 
 // Define site language
-const SITE_LANG = "en"; // Language code, e.g., 'en', 'zh_CN', 'ja', etc.
+const SITE_LANG = "zh_CN"; // Language code, e.g., 'en', 'zh_CN', 'ja', etc.
 
 export const siteConfig: SiteConfig = {
-	title: "Mizuki",
-	subtitle: "One demo website",
+	title: "yushunqwq's blog",
+	subtitle: "随便写点什么",
 
 	lang: SITE_LANG,
 
@@ -38,13 +38,14 @@ export const siteConfig: SiteConfig = {
 		// Support single image or image array, carousel is automatically enabled when array length > 1
 		src: {
 			desktop: [
-				"assets/desktop-banner/1.webp",
-				"assets/desktop-banner/2.webp",
-				"assets/desktop-banner/3.webp",
-				"assets/desktop-banner/4.webp",
-				"assets/desktop-banner/5.webp",
-				"assets/desktop-banner/6.webp",
-				"assets/desktop-banner/7.webp",
+				"https://images.760721.xyz/2025081819.webp",
+			//	"assets/desktop-banner/1.webp",
+			//	"assets/desktop-banner/2.webp",
+			//	"assets/desktop-banner/3.webp",
+			//	"assets/desktop-banner/4.webp",
+			//	"assets/desktop-banner/5.webp",
+			//	"assets/desktop-banner/6.webp",
+			//	"assets/desktop-banner/7.webp",
 			], // Desktop banner images
 			mobile: [
 				"assets/mobile-banner/1.webp",
@@ -57,26 +58,23 @@ export const siteConfig: SiteConfig = {
 			], // Mobile banner images
 		}, // Use local banner images
 
-		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. Default is 'center'
+		position: "top", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. Default is 'center'
 
 		carousel: {
 			enable: true, // When true: enable carousel for multiple images. When false: randomly display one image from the array
 
-			interval: 1, // Carousel interval time (seconds)
+			interval: 10, // Carousel interval time (seconds)
 		},
 
 		homeText: {
 			enable: true, // Display custom text on homepage
-			title: "Mizuki", // Homepage banner main title
+			title: "yushunqwq's blog", // Homepage banner main title
 
 			subtitle: [
-				"One demo website",
-				"Carousel Text1",
-				"Carousel Text2",
-				"Carousel Text3",
+				
 			], // Homepage banner subtitle, supports multiple texts
 			typewriter: {
-				enable: true, // Enable subtitle typewriter effect
+				enable: false, // Enable subtitle typewriter effect
 
 				speed: 100, // Typing speed (milliseconds)
 				deleteSpeed: 50, // Delete speed (milliseconds)
@@ -97,11 +95,11 @@ export const siteConfig: SiteConfig = {
 	},
 	favicon: [
 		// Leave empty to use default favicon
-		// {
-		//   src: '/favicon/icon.png',    // Icon file path
+		 {
+		    src: '/favicon.ico',    // Icon file path
 		//   theme: 'light',              // Optional, specify theme 'light' | 'dark'
 		//   sizes: '32x32',              // Optional, icon size
-		// }
+		 }
 	],
 };
 
@@ -115,7 +113,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Diary,
 		{
 			name: "GitHub",
-			url: "https://github.com/matsuzaka-yuki", // Internal links should not include base path as it will be automatically added
+			url: "https://github.com/yushunqwq", // Internal links should not include base path as it will be automatically added
 
 			external: true, // Show external link icon and open in new tab
 		},
@@ -123,24 +121,24 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.jpg", // Relative to /src directory. If starts with '/', relative to /public directory
-	name: "Mizuki",
-	bio: "This is a description",
+	avatar: "./IMG_202505211789_512x512.jpg", // Relative to /src directory. If starts with '/', relative to /public directory
+	name: "yushunqwq",
+	bio: "随便写点什么",
 	links: [
 		{
 			name: "Bilibli",
 			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
+			url: "https://space.bilibili.com/545653981",
 		},
 		{
 			name: "Gitee",
 			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
+			url: "https://gitee.com/yushunqwq",
 		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
+			url: "https://github.com/yushunqwq",
 		},
 	],
 };
@@ -166,12 +164,12 @@ export const commentConfig: CommentConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	enable: true, // Enable announcement feature
-	title: "Announcement", // Announcement title
-	content: "Welcome to my blog! This is a sample announcement.", // Announcement content
+	title: "公告", // Announcement title
+	content: "欢迎来到我的博客", // Announcement content
 	closable: true, // Allow users to close the announcement
 	link: {
 		enable: true, // Show link button
-		text: "Learn More", // Link text
+		text: "了解更多", // Link text
 		url: "/about/", // Link URL
 		external: true, // Internal link
 	},
